@@ -1,114 +1,282 @@
 <!DOCTYPE html>
-<html lang="es">
+<html class="light" lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BMC – Munay</title>
+    <title>BMC – Munay Infusiones</title>
 
     <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Fuentes -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
       rel="stylesheet"
     />
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#13ec49",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102215",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
     <style>
-      body {
-        font-family: "Montserrat", sans-serif;
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
       }
     </style>
   </head>
-  <body class="bg-gray-100 text-gray-800">
-    <!-- NAVBAR -->
-    <nav
-      class="w-full bg-white shadow-md py-4 px-8 flex justify-between items-center"
+  <body
+    class="font-display bg-background-light dark:bg-background-dark text-[#111813] dark:text-white"
+  >
+    <div
+      class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden"
     >
-      <h1 class="text-2xl font-bold text-purple-700">MUNAY</h1>
+      <!-- NAVBAR -->
+      <header
+        class="sticky top-0 z-50 flex w-full items-center justify-between border-b border-gray-200 dark:border-gray-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm px-4 py-3 md:px-8"
+      >
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-2">
+            <div
+              class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary"
+            >
+              <span class="material-symbols-outlined text-white text-lg"
+                >local_drink</span
+              >
+            </div>
+            <span class="text-xl font-bold text-[#111813] dark:text-white"
+              >Munay Infusiones</span
+            >
+          </div>
+        </div>
+        <nav class="hidden md:flex flex-1 justify-center gap-8">
+          <div class="flex items-center gap-9">
+            <a
+              href="index.html"
+              class="text-[#111813] dark:text-gray-300 dark:hover:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+              >Inicio</a
+            >
+            <a
+              href="bmc.html"
+              class="text-primary text-sm font-semibold leading-normal"
+              >BMC</a
+            >
+          </div>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button
+            id="theme-toggle"
+            class="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            aria-label="Toggle theme"
+          >
+            <span class="material-symbols-outlined text-lg">dark_mode</span>
+          </button>
+        </div>
+      </header>
 
-      <div class="flex space-x-6 font-medium">
-        <a href="index.html" class="hover:text-purple-600">Inicio</a>
-        <a href="bmc.html" class="text-purple-600 font-semibold">BMC</a>
-      </div>
-    </nav>
+      <!-- CONTENIDO -->
+      <main class="flex-1">
+        <section
+          class="relative flex min-h-[200px] w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-primary/10 via-background-light to-background-light dark:from-primary/5 dark:via-background-dark dark:to-background-dark px-4 py-8 md:py-12"
+        >
+          <div class="container mx-auto text-center">
+            <h1
+              class="text-4xl font-extrabold leading-tight text-[#111813] dark:text-white md:text-5xl lg:text-6xl mb-4"
+            >
+              Business Model Canvas
+              <span class="text-primary">(BMC)</span>
+            </h1>
+            <p
+              class="max-w-2xl mx-auto text-lg leading-relaxed text-gray-600 dark:text-gray-300 md:text-xl"
+            >
+              Herramienta visual para describir, analizar y diseñar el modelo de
+              negocio de Munay Infusiones
+            </p>
+          </div>
+        </section>
 
-    <!-- CONTENIDO -->
-    <section class="container mx-auto px-6 py-12">
-      <h2 class="text-4xl font-extrabold text-center mb-10">
-        Business Model Canvas (BMC)
-      </h2>
+        <section class="container mx-auto px-4 md:px-6 py-12">
+          <!-- Imagen del BMC -->
+          <div class="flex justify-center mb-12">
+            <img
+              src="bmc.jpg"
+              alt="Business Model Canvas"
+              class="rounded-xl shadow-xl max-w-5xl w-full"
+            />
+          </div>
 
-      <!-- Imagen del BMC -->
-      <div class="flex justify-center">
-        <img
-          src="bmc.jpg"
-          alt="Business Model Canvas"
-          class="rounded-lg shadow-xl max-w-4xl"
-        />
-      </div>
+          <!-- Explicación -->
+          <div
+            class="mt-12 bg-white dark:bg-gray-900 p-8 rounded-xl shadow-md max-w-4xl mx-auto border border-gray-200 dark:border-gray-800"
+          >
+            <h3
+              class="text-2xl font-bold mb-4 text-primary dark:text-primary"
+            >
+              ¿Qué es el BMC?
+            </h3>
+            <p class="mb-4 text-gray-600 dark:text-gray-300 leading-relaxed">
+              El Business Model Canvas (BMC) es una herramienta visual que permite
+              describir, analizar y diseñar modelos de negocio de manera clara y
+              estructurada. En este caso, se utilizó para definir todos los
+              elementos clave del proyecto Munay Infusiones.
+            </p>
 
-      <!-- Explicación -->
-      <div class="mt-12 bg-white p-8 rounded-lg shadow-md max-w-4xl mx-auto">
-        <h3 class="text-2xl font-bold mb-4 text-purple-700">¿Qué es el BMC?</h3>
-        <p class="mb-4">
-          El Business Model Canvas (BMC) es una herramienta visual que permite
-          describir, analizar y diseñar modelos de negocio de manera clara y
-          estructurada. En este caso, se utilizó para definir todos los
-          elementos clave del proyecto Munay.
-        </p>
+            <h3
+              class="text-xl font-semibold mt-8 mb-4 text-[#111813] dark:text-white"
+            >
+              ¿Qué incluye este BMC?
+            </h3>
 
-        <h3 class="text-xl font-semibold mt-6 mb-2">¿Qué incluye este BMC?</h3>
+            <ul class="list-disc ml-6 space-y-3 text-gray-600 dark:text-gray-300">
+              <li>
+                <strong class="text-[#111813] dark:text-white"
+                  >Socios Clave:</strong
+                >
+                Proveedores, laboratorios, creadores de contenido, tiendas
+                naturistas.
+              </li>
+              <li>
+                <strong class="text-[#111813] dark:text-white"
+                  >Actividades Clave:</strong
+                >
+                Deshidratación, formulación, envasado, marketing y producción de
+                contenido.
+              </li>
+              <li>
+                <strong class="text-[#111813] dark:text-white"
+                  >Propuesta de Valor:</strong
+                >
+                Infusiones instantáneas naturales, funcionales y sostenibles.
+              </li>
+              <li>
+                <strong class="text-[#111813] dark:text-white"
+                  >Relaciones con Clientes:</strong
+                >
+                Community building, asistencia personalizada, educación de
+                bienestar.
+              </li>
+              <li>
+                <strong class="text-[#111813] dark:text-white"
+                  >Segmentos de Clientes:</strong
+                >
+                Estudiantes, deportistas, personas interesadas en salud natural.
+              </li>
+              <li>
+                <strong class="text-[#111813] dark:text-white"
+                  >Recursos Clave:</strong
+                >
+                Plantas medicinales, tecnología, envases, equipo de marketing.
+              </li>
+              <li>
+                <strong class="text-[#111813] dark:text-white">Canales:</strong>
+                Página web, redes sociales, tiendas, ferias.
+              </li>
+              <li>
+                <strong class="text-[#111813] dark:text-white"
+                  >Competidores:</strong
+                >
+                Frutté, Agrote, La Tetera Azul, Windsor.
+              </li>
+              <li>
+                <strong class="text-[#111813] dark:text-white"
+                  >Estructura de Costos:</strong
+                >
+                Materia prima, maquinaria, envasado, publicidad, logística.
+              </li>
+              <li>
+                <strong class="text-[#111813] dark:text-white"
+                  >Fuentes de Ingreso:</strong
+                >
+                Venta de frascos, recargas, combos funcionales, ediciones
+                especiales.
+              </li>
+            </ul>
 
-        <ul class="list-disc ml-6 space-y-2">
-          <li>
-            <strong>Socios Clave:</strong> Proveedores, laboratorios, creadores
-            de contenido, tiendas naturistas.
-          </li>
-          <li>
-            <strong>Actividades Clave:</strong> Deshidratación, formulación,
-            envasado, marketing y producción de contenido.
-          </li>
-          <li>
-            <strong>Propuesta de Valor:</strong> Infusiones instantáneas
-            naturales, funcionales y sostenibles.
-          </li>
-          <li>
-            <strong>Relaciones con Clientes:</strong> Community building,
-            asistencia personalizada, educación de bienestar.
-          </li>
-          <li>
-            <strong>Segmentos de Clientes:</strong> Estudiantes, deportistas,
-            personas interesadas en salud natural.
-          </li>
-          <li>
-            <strong>Recursos Clave:</strong> Plantas medicinales, tecnología,
-            envases, equipo de marketing.
-          </li>
-          <li>
-            <strong>Canales:</strong> Página web, redes sociales, tiendas,
-            ferias.
-          </li>
-          <li>
-            <strong>Competidores:</strong> Frutté, Agrote, La Tetera Azul,
-            Windsor.
-          </li>
-          <li>
-            <strong>Estructura de Costos:</strong> Materia prima, maquinaria,
-            envasado, publicidad, logística.
-          </li>
-          <li>
-            <strong>Fuentes de Ingreso:</strong> Venta de frascos, recargas,
-            combos funcionales, ediciones especiales.
-          </li>
-        </ul>
+            <p class="mt-8 text-gray-600 dark:text-gray-300 leading-relaxed">
+              Este BMC resume la visión estratégica de Munay Infusiones y define
+              cómo se genera valor para los clientes mediante un producto
+              natural, saludable y ecológico.
+            </p>
+          </div>
+        </section>
+      </main>
 
-        <p class="mt-6 text-gray-700">
-          Este BMC resume la visión estratégica de Munay y define cómo se genera
-          valor para los clientes mediante un producto natural, saludable y
-          ecológico.
-        </p>
-      </div>
-    </section>
+      <footer
+        class="border-t border-gray-200 dark:border-gray-800 bg-background-light dark:bg-background-dark px-4 py-8 md:px-8 mt-12"
+      >
+        <div class="container mx-auto">
+          <div
+            class="flex flex-col items-center justify-between gap-4 md:flex-row"
+          >
+            <div class="flex items-center gap-2">
+              <div
+                class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary"
+              >
+                <span class="material-symbols-outlined text-white text-lg"
+                  >local_drink</span
+                >
+              </div>
+              <span class="text-xl font-bold text-[#111813] dark:text-white"
+                >Munay Infusiones</span
+              >
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              © 2025 Munay Infusiones. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Theme toggle functionality
+      const themeToggle = document.getElementById("theme-toggle");
+      const html = document.documentElement;
+
+      // Check for saved theme preference or default to light mode
+      const currentTheme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+      html.classList.toggle("dark", currentTheme === "dark");
+
+      themeToggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+        const newTheme = html.classList.contains("dark") ? "dark" : "light";
+        localStorage.setItem("theme", newTheme);
+
+        // Update icon
+        const icon = themeToggle.querySelector("span");
+        icon.textContent = newTheme === "dark" ? "light_mode" : "dark_mode";
+      });
+
+      // Update icon on load
+      const icon = themeToggle.querySelector("span");
+      icon.textContent = html.classList.contains("dark")
+        ? "light_mode"
+        : "dark_mode";
+    </script>
   </body>
 </html>
