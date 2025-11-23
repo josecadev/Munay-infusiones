@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Infusiones Arawi - Bienestar Ancestral, Vida Moderna</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#13ec49",
+              "background-light": "#f6f8f6",
+              "background-dark": "#102215",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="font-display bg-background-light dark:bg-background-dark text-[#111813] dark:text-white"
+  >
+    <div
+      class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header
+          class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm"
+        >
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+              class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-gray-700 py-3"
+            >
+              <div
+                class="flex items-center gap-4 text-[#111813] dark:text-white"
+              >
+                <div class="size-6 text-primary">
+                  <svg
+                    fill="none"
+                    viewBox="0 0 48 48"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g clip-path="url(#clip0_6_330)">
+                      <path
+                        clip-rule="evenodd"
+                        d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                        fill="currentColor"
+                        fill-rule="evenodd"
+                      ></path>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_6_330">
+                        <rect fill="white" height="48" width="48"></rect>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+                <h2
+                  class="text-[#111813] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]"
+                >
+                  Munay Infusiones
+                </h2>
+              </div>
+              <nav class="hidden md:flex flex-1 justify-center gap-8">
+                <div class="flex items-center gap-9">
+                  <a
+                    class="text-[#111813] dark:text-gray-300 dark:hover:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                    href="#"
+                    >Inicio</a
+                  >
+                  <a
+                    class="text-[#111813] dark:text-gray-300 dark:hover:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                    href="#"
+                    >Productos</a
+                  >
+                  <a
+                    class="text-[#111813] dark:text-gray-300 dark:hover:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                    href="#"
+                    >Nuestra Historia</a
+                  >
+                  <a
+                    class="text-[#111813] dark:text-gray-300 dark:hover:text-white text-sm font-medium leading-normal hover:text-primary transition-colors"
+                    href="#"
+                    >Contacto</a
+                  >
+                </div>
+              </nav>
+              <div class="flex items-center gap-2">
+                <a
+                  href="bmc.html"
+                  class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 text-[#111813] dark:text-white dark:bg-primary/30 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/30 dark:hover:bg-primary/40 transition-colors"
+                >
+                  <span class="truncate">BMC</span>
+                </a>
+                <button
+                  class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-gray-200 dark:bg-gray-800 text-[#111813] dark:text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
+                >
+                  <span class="material-symbols-outlined text-lg"
+                    >shopping_cart</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <main class="flex-1">
+          <div class="px-4 sm:px-6 lg:px-8 py-5">
+            <div class="max-w-7xl mx-auto">
+              <div class="@container">
+                <div class="@[480px]:p-4">
+                  <div
+                    class="flex min-h-[60vh] md:min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4 text-center"
+                    data-alt="Paisaje sereno de montañas bolivianas con plantas nativas en primer plano"
+                    style="
+                      background-image: linear-gradient(
+                          rgba(0, 0, 0, 0.2) 0%,
+                          rgba(0, 0, 0, 0.5) 100%
+                        ),
+                        url('https://lh3.googleusercontent.com/aida-public/AB6AXuB8SUNznDmlZ9JiOIAxBOp-tgZS8-4uJoAGptO2bNMEFOiGDGanL3aDxk_BJrguVix1vhaSKDmsYZbGZCNFRx_TryK0pHqhluYj_0MCehMIzNWYOstnYXEIlboi4kocpK_SmdK5kHld9P2v8i6LVvYWakG06MgxwdQjoOcly8-YMlQ-l9mcdUcTtrgjEdqm0kxv7fIeCR6u74ajJFoqvwZNXt5MknECb8-DFahzZ_2chA1nba-Y6xEOIjREyo07GBSslAdJHgUItm4');
+                    "
+                  >
+                    <div class="flex flex-col gap-2 max-w-3xl">
+                      <h1
+                        class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                      >
+                        Bienestar Ancestral, Vida Moderna
+                      </h1>
+                      <h2
+                        class="text-white/90 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal"
+                      >
+                        Descubre el poder de las infusiones instantáneas en
+                        polvo, elaboradas con plantas medicinales bolivianas
+                        únicas. Una alternativa práctica y saludable al té
+                        tradicional.
+                      </h2>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-[#111813] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:brightness-110 transition-all"
+                    >
+                      <span class="truncate">Explora Nuestras Infusiones</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+            <div class="max-w-7xl mx-auto">
+              <div class="flex flex-col gap-10 @container">
+                <div class="flex flex-col gap-4 text-center items-center">
+                  <h1
+                    class="text-[#111813] dark:text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-2xl"
+                  >
+                    ¿Por Qué Elegir Nuestras Infusiones?
+                  </h1>
+                  <p
+                    class="text-gray-600 dark:text-gray-300 text-base font-normal leading-normal max-w-2xl"
+                  >
+                    Combinamos la sabiduría ancestral con la conveniencia
+                    moderna para apoyar tu bienestar físico y mental.
+                  </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                  <div
+                    class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark p-6 flex-col items-center text-center"
+                  >
+                    <div
+                      class="text-primary bg-primary/20 p-3 rounded-full mb-2"
+                    >
+                      <span class="material-symbols-outlined text-3xl"
+                        >eco</span
+                      >
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h2
+                        class="text-[#111813] dark:text-white text-base font-bold leading-tight"
+                      >
+                        Plantas Bolivianas Únicas
+                      </h2>
+                      <p
+                        class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"
+                      >
+                        Nuestros ingredientes, del corazón de Bolivia, son poco
+                        comunes, potentes y usados tradicionalmente para el
+                        bienestar.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark p-6 flex-col items-center text-center"
+                  >
+                    <div
+                      class="text-primary bg-primary/20 p-3 rounded-full mb-2"
+                    >
+                      <span class="material-symbols-outlined text-3xl"
+                        >psychology</span
+                      >
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h2
+                        class="text-[#111813] dark:text-white text-base font-bold leading-tight"
+                      >
+                        Beneficios Funcionales
+                      </h2>
+                      <p
+                        class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"
+                      >
+                        Cada mezcla está diseñada para ofrecer beneficios
+                        específicos para tu cuerpo y mente, desde el enfoque
+                        hasta la relajación.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-1 gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark p-6 flex-col items-center text-center"
+                  >
+                    <div
+                      class="text-primary bg-primary/20 p-3 rounded-full mb-2"
+                    >
+                      <span class="material-symbols-outlined text-3xl"
+                        >timer</span
+                      >
+                    </div>
+                    <div class="flex flex-col gap-1">
+                      <h2
+                        class="text-[#111813] dark:text-white text-base font-bold leading-tight"
+                      >
+                        Moderno y Práctico
+                      </h2>
+                      <p
+                        class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"
+                      >
+                        Disfruta la bondad de las hierbas medicinales en
+                        segundos. Solo vierte, mezcla y disfruta una alternativa
+                        saludable al té en bolsita.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="px-4 sm:px-6 lg:px-8 py-10 sm:py-16 bg-white dark:bg-gray-900"
+          >
+            <div class="max-w-7xl mx-auto">
+              <h2
+                class="text-[#111813] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] pb-5 pt-5 text-center"
+              >
+                Nuestras Variedades de Infusiones
+              </h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="flex flex-col gap-3 group">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl overflow-hidden"
+                    data-alt="Una imagen vibrante y abstracta de tonos verdes y amarillos, que representa la claridad mental."
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDE3d6krI9wWt5hQivR92oD_ctAH0KJwwd_JL04LErX8YQgO3o22lSyfwVHRiI_KQUXg1iorDy-bTrQskw9bsk0gL18y61Ct7ZSinhZA2u7cXOvG3f9qsTb02RuiczFQW6-YVeuVu8IPFL2S7INPqEia7zycNI5zATd0D-HReDrErIZ8LElRSvu0wuM2qN4XINwVZ-5SNDTRII0uLc0cLMWo2OPqX1XNp79Wvq4H2DP1ofidO5LyqU-nl8dpv6NQUIS88mH5pqMss8');
+                    "
+                  ></div>
+                  <div class="pt-2">
+                    <p
+                      class="text-[#111813] dark:text-white text-base font-medium leading-normal"
+                    >
+                      Enfoque Andino
+                    </p>
+                    <p
+                      class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"
+                    >
+                      Para Claridad Mental
+                    </p>
+                    <p
+                      class="text-primary text-sm font-bold leading-normal mt-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                    >
+                      Saber Más →
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-3 group">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl overflow-hidden"
+                    data-alt="Una imagen relajante y abstracta de tonos morados y azules, que representa la relajación."
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJHHuWoMqINVoQFPEeN7oEpfm3pr3vxt-H1GLkSZqGGNSHYgKx2BKhGIVidtMXgv6UFV1a9AVWflYZ9v4x4KN3Lko26DJS2Zadv9i0HbMfE6wqgsRI4R0ezy3pKdek48SXJ2tLpEv0fWFrhzVuPJpxyNivK4TgYMw-mM_S959k0wkVc76M7ZS1OSpMNQnOAphra7PgAOMt0ypinVq62DWS0uXaJxOQ2OS230hAsqXps61_RiVZWyg7UtzSQ5N8dcm3HVDpUCRow3k');
+                    "
+                  ></div>
+                  <div class="pt-2">
+                    <p
+                      class="text-[#111813] dark:text-white text-base font-medium leading-normal"
+                    >
+                      Mezcla Serenidad
+                    </p>
+                    <p
+                      class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"
+                    >
+                      Para Relajación
+                    </p>
+                    <p
+                      class="text-primary text-sm font-bold leading-normal mt-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                    >
+                      Saber Más →
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-3 group">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl overflow-hidden"
+                    data-alt="Una imagen energética y abstracta de tonos rojos y naranjas, que representa la vitalidad."
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEWIQOghyBAjIy0Hq5xAnWY0sA6qkwv5QSxUs4IMzZVil3Xe613SFu4_a4qA2oT2xGwsv7625cAlt5D0XAWTbDGSCZPyJ_NSYV1aSaOmrMC0RYEQaEshrhX_hcL305eDS8OQyyzAwqG5lxcT4ac0EYZYqgpV72_a6ymWd8XD2ieWNEfgL9HyQv0XZYIwOqLP6148cqROSIcTOUgiYl_C8bMA4GQRBJuhv9o9ljrdLg-PRnvFd_zf9Mc75gQENBCn5SHjW-s5HZGC4');
+                    "
+                  ></div>
+                  <div class="pt-2">
+                    <p
+                      class="text-[#111813] dark:text-white text-base font-medium leading-normal"
+                    >
+                      Impulso Vital
+                    </p>
+                    <p
+                      class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal"
+                    >
+                      Para Energía
+                    </p>
+                    <p
+                      class="text-primary text-sm font-bold leading-normal mt-1 opacity-0 group-hover:opacity-100 transition-opacity"
+                    >
+                      Saber Más →
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="px-4 sm:px-6 lg:px-8 py-10 sm:py-20">
+            <div class="max-w-7xl mx-auto">
+              <div class="flex flex-col gap-10 @container">
+                <div class="flex flex-col gap-4 text-center items-center">
+                  <h1
+                    class="text-[#111813] dark:text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-2xl"
+                  >
+                    Listo en Segundos
+                  </h1>
+                  <p
+                    class="text-gray-600 dark:text-gray-300 text-base font-normal leading-normal max-w-2xl"
+                  >
+                    Experimenta el bienestar sin esperas. Nuestras infusiones
+                    están diseñadas para tu estilo de vida moderno y acelerado.
+                  </p>
+                </div>
+                <div
+                  class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center"
+                >
+                  <div class="flex flex-col items-center gap-4">
+                    <div class="text-primary bg-primary/20 p-4 rounded-full">
+                      <span class="material-symbols-outlined text-4xl"
+                        >local_drink</span
+                      >
+                    </div>
+                    <h3
+                      class="text-[#111813] dark:text-white text-lg font-bold"
+                    >
+                      1. Vierte
+                    </h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm">
+                      Añade un sobre de nuestro potente polvo a tu taza.
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-4">
+                    <div class="text-primary bg-primary/20 p-4 rounded-full">
+                      <span class="material-symbols-outlined text-4xl"
+                        >blender</span
+                      >
+                    </div>
+                    <h3
+                      class="text-[#111813] dark:text-white text-lg font-bold"
+                    >
+                      2. Mezcla
+                    </h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm">
+                      Vierte agua fría o caliente y remueve unos segundos.
+                    </p>
+                  </div>
+                  <div class="flex flex-col items-center gap-4">
+                    <div class="text-primary bg-primary/20 p-4 rounded-full">
+                      <span class="material-symbols-outlined text-4xl"
+                        >mood</span
+                      >
+                    </div>
+                    <h3
+                      class="text-[#111813] dark:text-white text-lg font-bold"
+                    >
+                      3. Disfruta
+                    </h3>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm">
+                      Saborea y siente los beneficios del bienestar ancestral
+                      boliviano.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer
+          class="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800"
+        >
+          <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div class="col-span-2 md:col-span-1">
+                <div class="flex items-center gap-2">
+                  <div class="size-5 text-primary">
+                    <svg
+                      fill="currentColor"
+                      viewBox="0 0 48 48"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <h2
+                    class="text-[#111813] dark:text-white text-base font-bold"
+                  >
+                    Arawi
+                  </h2>
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                  Llevando la sabiduría ancestral boliviana al mundo moderno.
+                </p>
+              </div>
+              <div>
+                <h3
+                  class="text-sm font-semibold text-gray-600 dark:text-gray-300 tracking-wider uppercase"
+                >
+                  Compañía
+                </h3>
+                <ul class="mt-4 space-y-2">
+                  <li>
+                    <a
+                      class="text-base text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary"
+                      href="#"
+                      >Nuestra Historia</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-base text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary"
+                      href="#"
+                      >Productos</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-base text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary"
+                      href="#"
+                      >Contacto</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3
+                  class="text-sm font-semibold text-gray-600 dark:text-gray-300 tracking-wider uppercase"
+                >
+                  Legal
+                </h3>
+                <ul class="mt-4 space-y-2">
+                  <li>
+                    <a
+                      class="text-base text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary"
+                      href="#"
+                      >Política de Privacidad</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="text-base text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-primary"
+                      href="#"
+                      >Términos de Servicio</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3
+                  class="text-sm font-semibold text-gray-600 dark:text-gray-300 tracking-wider uppercase"
+                >
+                  Mantente Actualizado
+                </h3>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-4">
+                  Únete a nuestra lista para recibir noticias y ofertas.
+                </p>
+                <form class="mt-2 flex">
+                  <input
+                    class="w-full rounded-l-md border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:ring-primary focus:border-primary"
+                    placeholder="Introduce tu email"
+                    type="email"
+                  />
+                  <button
+                    class="p-2 bg-primary text-[#111813] rounded-r-md font-bold text-sm"
+                    type="submit"
+                  >
+                    Suscribirse
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div
+              class="mt-8 border-t border-gray-200 dark:border-gray-800 pt-8 text-center text-sm text-gray-500 dark:text-gray-400"
+            >
+              <p>© 2024 Munay. Todos los derechos reservados.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
